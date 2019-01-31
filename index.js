@@ -6,7 +6,7 @@ let workstationId = 0;
 
 fastify.get('/', async(request, response) => {
   workstationId += 1
-  return workstationId
+  return workstationId < 10 ? `0${workstationId}` : workstationId
 })
 
 // Run the server!
